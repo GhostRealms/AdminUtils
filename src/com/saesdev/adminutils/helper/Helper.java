@@ -17,9 +17,4 @@ public class Helper {
 	public static Logger getLogger() {
 		return log;
 	}
-	
-	
-	
-	
-
 }

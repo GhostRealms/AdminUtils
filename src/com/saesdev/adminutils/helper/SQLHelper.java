@@ -9,18 +9,12 @@ public class SQLHelper {
 	
 	private Connection c = null;
 	private Statement statement = null;
+	private SQLite sqlite;
 	
-	public SQLHelper(Connection c) {
-		this.c = c;
-		if(c != null) {
-			try {
-				statement = c.createStatement();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		} else {
-			Helper.getLogger().severe("Failed to Initialize SQLite Connection.");
-		}
+	public SQLHelper
+	
+	public void initalize() {
+		sqlite = new SQLite(new AdminUtils(), )
 	}
 	
 	public void execute(String sql) {

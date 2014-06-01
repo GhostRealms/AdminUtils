@@ -18,4 +18,7 @@ We're looking for people who want to help contribute to the plugin! If you want 
 ### Issues
 Please report issues Via the GitHub Issue Tracker.
 
+### Licence
+Licensed Under [GPLv3](../blob/master/LICENSE)
+
 Thanks.

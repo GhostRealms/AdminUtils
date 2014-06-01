@@ -1,4 +1,4 @@
-package com.saesdev.adminutils;
+package com.saesdev.adminutils.helper;
 
 import java.util.UUID;
 

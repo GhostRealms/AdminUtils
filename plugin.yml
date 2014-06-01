@@ -1,3 +1,7 @@
 name: AdminUtils
 main: com.saesdev.adminutils.AdminUtils
 version: 0.0.1
+commands:
+  kill:
+    aliases: [suicide, death, murder]
+  killall:

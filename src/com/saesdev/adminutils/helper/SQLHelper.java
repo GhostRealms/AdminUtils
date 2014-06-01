@@ -12,10 +12,14 @@ public class SQLHelper {
 	
 	public SQLHelper(Connection c) {
 		this.c = c;
-		try {
-			statement = c.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		if(c != null) {
+			try {
+				statement = c.createStatement();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		} else {
+			Helper.getLogger().severe("Failed to Initialize SQLite Connection.");
 		}
 	}
 	

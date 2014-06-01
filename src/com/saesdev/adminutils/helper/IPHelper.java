@@ -5,7 +5,7 @@ import java.util.UUID;
 public class IPHelper {
 	
 	public boolean hasAlt(UUID uuid) {
-		//In Development - Need Database Connections
+		
 		return false;
 	}
 	

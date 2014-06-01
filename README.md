@@ -11,11 +11,7 @@ as well as adding our own customizable commands and features.
 ### Dependencies
 * Bukkit/Spigot 1.7.9
 * Vault
-* [SQLibrary](http://dev.bukkit.org/bukkit-plugins/sqlibrary/)
-
-### Database/Setup
-We're using SQLibrary to handle database connections. This allows for more database connections than would be natively supported.
-You *Must* Install SQLibrary on your server for Our plugin to work!
+* SQLite Database
 
 ### Contribute!
 We're looking for people who want to help contribute to the plugin! If you want to add a feature, or help out, fork the repo, and submit a Pull request! (If you contribute a lot, we'll add you as a contributor on bukkit :P)

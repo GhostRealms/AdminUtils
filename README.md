@@ -16,7 +16,7 @@ as well as adding our own customizable commands and features.
 We're looking for people who want to help contribute to the plugin! If you want to add a feature, or help out, fork the repo, and submit a Pull request! (If you contribute a lot, we'll add you as a contributor on bukkit :P)
 
 ### Issues
-Please report issues Via the GitHub Issue Tracker.
+Please report issues Via the [GitHub Issue Tracker](https://github.com/Saes/AdminUtils/issues).
 
 ### Licence
 Licensed Under [GPLv3](../master/LICENSE)

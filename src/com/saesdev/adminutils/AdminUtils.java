@@ -8,27 +8,37 @@ package com.saesdev.adminutils;
 import java.sql.Connection;
 import java.util.logging.Logger;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.saesdev.adminutils.helper.SQLHelper;
-import com.saesdev.adminutils.helper.SQLite;
 
 public class AdminUtils extends JavaPlugin {
 	
 	private Logger log = this.getLogger();
 	private FileConfiguration config = this.getConfig();
+	SQLHelper sqlhelper;
 	
 	@Override
 	public void onEnable() {
 		this.saveDefaultConfig();
-		SQLHelper sqlhelper = new SQLHelper();
+		sqlhelper = new SQLHelper(this);
 		sqlhelper.initalize();
 	}
 	
 	@Override
 	public void onDisable() {
 		
+	}
+	
+	public Plugin plugin() {
+		return Bukkit.getPluginManager().getPlugin("AdminUtils");
+	}
+	
+	public SQLHelper getSQL() {
+		return sqlhelper;
 	}
 
 }

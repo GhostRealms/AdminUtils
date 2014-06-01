@@ -11,9 +11,9 @@ public class SQLHelper {
 	
 	private AdminUtils plugin;
 	
-	private Connection c = null;
-	private Statement statement = null;
-	private SQLite sqlite;
+	private static Connection c = null;
+	private static Statement statement = null;
+	private static SQLite sqlite;
 	
 	public SQLHelper(AdminUtils plugin) {
 		this.plugin = plugin;
@@ -30,17 +30,21 @@ public class SQLHelper {
 		}
 	}
 	
-	public void execute(String sql) {
+	public static void execute(String sql) {
 		try {
-			statement.execute(sql);
+			statement.executeUpdate(sql);
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public ResultSet getData(String sql) throws SQLException {
+	public static ResultSet getData(String sql) throws SQLException {
 		ResultSet res = statement.executeQuery(sql);
 		return res;	
+	}
+
+	public static Connection getConnection() {
+		return c;
 	}
 
 }

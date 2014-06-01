@@ -20,7 +20,7 @@ public class IPHelper {
 	}
 	
 	public String getIP(UUID uuid) {
-		//In Development - Need Database
+		
 		return null;
 	}
 

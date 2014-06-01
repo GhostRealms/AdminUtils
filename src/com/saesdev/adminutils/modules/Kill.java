@@ -1,4 +1,4 @@
-package com.saesdev.adminutils.commands;
+package com.saesdev.adminutils.modules;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

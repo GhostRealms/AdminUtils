@@ -14,6 +14,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.saesdev.adminutils.helper.SQLHelper;
+import com.saesdev.adminutils.modules.Kill;
 
 public class AdminUtils extends JavaPlugin {
 	
@@ -26,6 +27,11 @@ public class AdminUtils extends JavaPlugin {
 		this.saveDefaultConfig();
 		sqlhelper = new SQLHelper(this);
 		sqlhelper.initalize();
+		
+		if(config.getBoolean("moules.kill")) {
+			getCommand("kill").setExecutor(new Kill());
+			getCommand("killall").setExecutor(new Kill());
+		}
 	}
 	
 	@Override

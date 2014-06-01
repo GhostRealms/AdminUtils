@@ -28,6 +28,14 @@ public class AdminUtils extends JavaPlugin {
 		sqlhelper = new SQLHelper(this);
 		sqlhelper.initalize();
 		
+		try {
+			Metrics metrics = new Metrics(this);
+			metrics.start();
+		} catch(Exception e) {
+			
+		}
+
+		
 		if(config.getBoolean("moules.kill")) {
 			getCommand("kill").setExecutor(new Kill());
 			getCommand("killall").setExecutor(new Kill());

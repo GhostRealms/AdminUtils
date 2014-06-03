@@ -1,6 +1,7 @@
 settings:
     database-name: database
-    updater: false
+    updater: true
+    metrics: true
 modules:
     chat: true;
     kill: true;

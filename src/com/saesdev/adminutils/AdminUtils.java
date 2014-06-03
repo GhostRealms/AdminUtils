@@ -28,6 +28,7 @@ public class AdminUtils extends JavaPlugin {
 	public static Chat chat = null;
 	public static Economy econ = null;
 	
+	@SuppressWarnings("unused")
 	private Logger log = this.getLogger();
 	private FileConfiguration config = this.getConfig();
 	SQLHelper sqlhelper;

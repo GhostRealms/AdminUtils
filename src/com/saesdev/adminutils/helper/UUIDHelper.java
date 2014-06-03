@@ -7,23 +7,17 @@ import org.bukkit.entity.Player;
 
 public class UUIDHelper {
 	
-	public UUID getPlayerUUID(String username) {
-		Player p = Bukkit.getPlayer(username);
-		
-		UUID UUID = p.getUniqueId();
-		
-		return UUID;
+	public static UUID getPlayerUUID(String username) {
+		return UUID.fromString(username);
 	}
 	
-	public String getUserfromID(UUID uuid) {
+	public static String getUserfromID(UUID uuid) {
 		Player p = Bukkit.getPlayer(uuid);
-		String username = p.getName();
-		return username;
+		return p.getName();
 	}
 	
 	public boolean hasAlt(UUID uuid) {
 		//In Development - Need Database Connections
-		String sUUID = uuid.toString();
 		return false;
 	}
 	

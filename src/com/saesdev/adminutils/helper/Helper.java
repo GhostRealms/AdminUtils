@@ -6,6 +6,7 @@ import java.util.UUID;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
+import org.bukkit.configuration.file.FileConfiguration;
 
 import com.saesdev.adminutils.AdminUtils;
 
@@ -17,6 +18,7 @@ public class Helper {
 	private static AdminUtils au = plugin;
 	private static List<UUID> loggedInUsers = new ArrayList<UUID>();
 	
+	@SuppressWarnings("static-access")
 	public Helper(AdminUtils plugin) {
 		this.plugin = plugin;
 	}
@@ -56,5 +58,9 @@ public class Helper {
 	public static boolean isEnabled(String modname) {
 		boolean status = au.getConfig().getBoolean("modules." + modname);
 		return status;
+	}
+	
+	public static FileConfiguration getConfig() {
+		return au.getConfig();
 	}
 }

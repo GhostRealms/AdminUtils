@@ -1,5 +1,8 @@
 package com.saesdev.adminutils.helper;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
@@ -12,6 +15,7 @@ public class Helper {
 	
 	private static Logger log = plugin.getLogger();
 	private static AdminUtils au = plugin;
+	private static List<UUID> loggedInUsers = new ArrayList<UUID>();
 	
 	public Helper(AdminUtils plugin) {
 		this.plugin = plugin;
@@ -35,5 +39,17 @@ public class Helper {
 	
 	public static String getPluginVersion() {
 		return au.getDescription().getVersion();
+	}
+	
+	public static boolean isServerSecured() {
+		return au.getConfig().getBoolean("modules.security");
+	}
+	
+	public static void login(UUID user) {
+		loggedInUsers.add(user);
+	}
+	
+	public static void logout(UUID user) {
+		loggedInUsers.remove(user);
 	}
 }

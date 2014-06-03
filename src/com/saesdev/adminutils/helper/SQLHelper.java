@@ -25,6 +25,7 @@ public class SQLHelper {
 		if(sqlite.getConnection() == null) {
 			Helper.getLogger().severe("Failed to get SQLite Connection. Disabling AdminUtils.");
 			plugin.getServer().getPluginManager().disablePlugin(plugin);
+			initLoad();
 		} else {
 			Helper.getLogger().info("Sucessfully Initialized SQLite Connection");
 		}
@@ -45,6 +46,12 @@ public class SQLHelper {
 
 	public static Connection getConnection() {
 		return c;
+	}
+	
+	private void initLoad() {
+		//Settings for Initial Load of Database (Will Populate needed tables.)
+		execute("CREATE TABLE IF NOT EXISTS `users`;");
+		//The Users table stores IP addresses and UUIDs
 	}
 
 }

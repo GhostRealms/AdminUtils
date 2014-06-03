@@ -1,11 +1,10 @@
 package com.saesdev.adminutils;
 
 /*
- * AdminUtils is an Administration Utility Plugin for Bukkit. It is licenced under GNU GPLv3.
+ * AdminUtils is an Administration Utility Plugin for Bukkit. It is licensed under GNU GPLv3.
  * Authors: Rmarmorstein, Pluto1099, [Add Your Name Here If you Contribute :)]
  */
 
-import java.sql.Connection;
 import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;

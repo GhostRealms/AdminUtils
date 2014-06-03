@@ -52,4 +52,9 @@ public class Helper {
 	public static void logout(UUID user) {
 		loggedInUsers.remove(user);
 	}
+	
+	public static boolean isEnabled(String modname) {
+		boolean status = au.getConfig().getBoolean("modules." + modname);
+		return status;
+	}
 }

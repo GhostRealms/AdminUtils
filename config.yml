@@ -1,1 +1,6 @@
-database-name: database
+settings:
+    database-name: database
+    updater: false
+modules:
+    chat: true;
+    kill: true;

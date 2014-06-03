@@ -11,6 +11,7 @@ public class Helper {
 	private static AdminUtils plugin;
 	
 	private static Logger log = plugin.getLogger();
+	private static AdminUtils au = plugin;
 	
 	public Helper(AdminUtils plugin) {
 		this.plugin = plugin;
@@ -26,5 +27,13 @@ public class Helper {
 	
 	public static String noPerms() {
 		return ChatColor.RED + "You Don't have Permission to perform that Action!";
+	}
+	
+	public static AdminUtils getPlugin() {
+		return au;
+	}
+	
+	public static String getPluginVersion() {
+		return au.getDescription().getVersion();
 	}
 }
